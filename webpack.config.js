@@ -10,7 +10,7 @@ module.exports = {
         clean: true,
     },
     devtool: "eval-source-map",
-    devServer:{
+    devServer: {
         watchFiles: ["./src/template.html"],
     },
     plugins: [
@@ -30,17 +30,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg)$/i,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "images/",
-                            publicPath: "images/",
-                            esModule: false,
-                        },
-                    },
-                ],
+                type: "asset/resource",
+                generator: {
+                    filename: "images/[name][ext][query]",
+                },
             },
         ],
     },

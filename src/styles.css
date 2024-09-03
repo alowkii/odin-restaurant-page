@@ -181,6 +181,6 @@ footer{
 }
 
 footer a{
-    color: var(--fg-sec-color);
     text-decoration: none;
+    color: var(--fg-sec-color);
 }
