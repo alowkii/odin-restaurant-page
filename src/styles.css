@@ -2,32 +2,33 @@
 
 :root{
     --bg-color: #F2EFEB;
-    --sec-color: #D9C8B4;
-    --txt-main-color: #403C3A;
-    --txt-sec-color: #BEBDBF;
+    --bg-sec-color: #D9C8B4;
+    --fg-color: #403C3A;
+    --fg-sec-color: #BEBDBF;
 }
 
-body{
-    background-color: var(--bg-color);
-    color: eb5e23;
+*{
     font-family: "Raleway",Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+body{
+    background-color: var(--fg-color);
+    color: eb5e23;
+}
+
 nav{
-    background-color: var(--sec-color);
-    color: var(--txt-main-color);
+    background-color: var(--bg-sec-color);
+    color: var(--fg-color);
     text-align: center;
-    padding: 5px;
     display: flex;
     justify-content: space-around;
-
 }
 
 #logo{
-    width: 100px;
-    height: 100px;
+    width: 6rem;
+    height: 6rem;
     margin: 0;
     display: flex;
     text-decoration: none;
@@ -40,8 +41,13 @@ nav{
 }
 
 #logo span:nth-of-type(1){
+    z-index: 2;
+    left: 21px;
+}
+
+#logo span:nth-of-type(2){
     z-index: 0;
-    left: 10px;
+    left: 20px;
 }
 
 #logo img{
@@ -50,9 +56,14 @@ nav{
     right: 60px;
 }
 
-#logo span:nth-of-type(2){
+#logo span:nth-of-type(3){
     z-index: 2;
-    right: 90px;
+    right: 80px;
+}
+
+#logo:hover span{
+    color: var(--fg-color);
+    transition: ease-in-out 1s;
 }
 
 #logo:hover > img{
@@ -61,12 +72,23 @@ nav{
     transition: ease-in 0.5s;
 }
 
-header > nav > button{
+header > nav  button{
     background-color: transparent;
-    color: var(--txt-main-color);
+    color: var(--fg-color);
     font-size: large;
     border: none;
-    padding: 5px;
-    margin: 5px;
+    margin: 0;
     cursor: pointer;
+    text-transform: uppercase;
+    width: 10rem;
+}
+
+header > nav  button:hover{
+    background-color: var(--fg-sec-color);
+    transition: ease-in-out 0.5s;
+}
+
+header > nav  button.selected{
+    background-color: var(--fg-color);
+    color: var(--bg-sec-color);
 }

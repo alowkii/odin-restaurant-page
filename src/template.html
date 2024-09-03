@@ -10,13 +10,15 @@
     <header>
         <nav>
             <a href="./" id="logo">
-                <span>S&</span>
+                <span>S</span>
+                <span>&</span>
                 <img src="./logo.png" alt="" width="100px">
                 <span>S</span>
             </a>
-            <button>Home</button>
-            <button>Menu</button>
-            <button>About</button>
+            <button class="selected" onclick="displayHome()">Home</button>
+            <button onclick="displayMenu()">Menu</button>
+            <button onclick="displayAbout()">About</button>
+            <button onclick="displayContact()">Contact</button>
         </nav>
     </header>
     <div id="content"></div>
