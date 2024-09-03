@@ -7,7 +7,7 @@ function displayMenu() {
     const content = document.getElementById("content");
   
     const menu = document.createElement("div");
-    menu.id = "menu";
+    menu.id = "menu-content";
     menu.textContent = "Menu";
   
     content.appendChild(menu);

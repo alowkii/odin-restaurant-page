@@ -7,7 +7,7 @@ function displayAbout() {
     const content = document.getElementById("content");
   
     const about = document.createElement("div");
-    about.id = "about";
+    about.id = "about-content";
     about.textContent = "About";
   
     content.appendChild(about);

@@ -7,7 +7,7 @@ function displayContact() {
     const content = document.getElementById("content");
   
     const contact = document.createElement("div");
-    contact.id = "contact";
+    contact.id = "contact-content";
     contact.textContent = "Contact";
   
     content.appendChild(contact);

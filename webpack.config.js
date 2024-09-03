@@ -30,7 +30,17 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg)$/i,
-                type: "asset/resource",
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "images/",
+                            publicPath: "images/",
+                            esModule: false,
+                        },
+                    },
+                ],
             },
         ],
     },
