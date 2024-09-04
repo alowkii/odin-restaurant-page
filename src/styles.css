@@ -191,3 +191,23 @@ footer a{
     text-decoration: none;
     color: var(--fg-sec-color);
 }
+
+#menu-content{
+    margin: 3rem 10% 0 10%;
+    border: var(--bg-color) solid 1px;
+}
+
+#menu-content > .menu-item :is(h3, p){
+    margin: 3rem 10% 0 10%;
+}
+
+#menu-content > .menu-item h3{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+#menu-content > .menu-item p{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 0 0 1rem 12%;
+}
