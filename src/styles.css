@@ -115,7 +115,6 @@ header > nav  button.selected{
 }
 
 .slider{
-    display: flex;
     margin: 4rem 0 0 0;
     width: 100%;
     padding: 0;
@@ -123,20 +122,19 @@ header > nav  button.selected{
 }
 
 .slider:after{
-    content: "We make delicious food here!";
+    content: "Lovingly Crafted, Authentically Served";
     width: 100%;
     z-index: -1;
     position: absolute;
-    right: 0;
+    right: 100%;
     top: 70%;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--fg-sec-color);
     font-weight: 100;
     text-transform: uppercase;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
     animation: autoRun 30s linear;
-    animation-delay: 0s;
 }
 
 .slider .list{
@@ -150,8 +148,8 @@ header > nav  button.selected{
     width: 25rem;
     height: 20rem;
     position: absolute;
-    left: 100%;
-    animation: autoRun 30s linear infinite;
+    left: 50%;
+    animation: autoRunReverse 30s linear infinite;
     animation-delay: calc((30s / 10) * (var(--position) - 1));
 }
 
@@ -163,10 +161,19 @@ header > nav  button.selected{
 
 @keyframes autoRun{
     from{
+        left: calc(20rem * -1);
+    }
+    to{
+        left: 100%
+    }
+}
+
+@keyframes autoRunReverse{
+    from{
         left: 100%;
     }
     to{
-        left: calc(20rem * -1);
+        left: calc(25rem * -2);
     }
 }
 

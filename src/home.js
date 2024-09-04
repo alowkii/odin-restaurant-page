@@ -48,6 +48,7 @@ function displayHome() {
         const img = document.createElement("img");
         img.src = image;  // Use the imported image path
         img.alt = `food${i}`;
+        img.loading = "eager";
         item.appendChild(img);
     });
   
