@@ -211,3 +211,22 @@ footer a{
     font-weight: 100;
     margin: 0 0 1rem 12%;
 }
+
+#contact-content{
+    margin: 2rem 10% 2rem 10%;
+}
+
+#contact-content *{
+    text-decoration: none;
+    color: var(--fg-sec-color);
+}
+
+#contact-content h1{
+    margin: 0;
+}
+
+#contact-content * h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+}
